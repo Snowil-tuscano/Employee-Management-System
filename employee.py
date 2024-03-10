@@ -71,6 +71,26 @@ class emplyee :
         # .....................frame2.................
         Frame2 = Frame(self.root,bd=4,relief=RIDGE)
         Frame2.place(x=770,y=60,width=490,height=300)
+        Frame2.config(bg="white")
+        title2= Label(Frame2,text="Employee Salary Details",font=("times new roman",20,),bg="lightgray",fg="black").place(x=0,y=0,relwidth=1)
+        
+        # .............row1...........
+        lbl_code = Label(Frame2,text="Base Pay",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=60)
+        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=120,y=60,width=90)
+        
+        lbl_code = Label(Frame2,text="Present Days",font=("times new roman",18,),bg="white",fg="black").place(x=20,y=60)
+        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=370,y=60,width=90)
+        
+       # .............row...........
+        lbl_code = Label(Frame2,text="Base Pay",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=60)
+        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=120,y=60,width=90)
+        
+        lbl_code = Label(Frame2,text="Present Days",font=("times new roman",18,),bg="white",fg="black").place(x=20,y=60)
+        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=370,y=60,width=90)
+        # lbl_code = Label(Frame2,text="Base Pay",font=("times new roman",18,),bg="white",fg="black").place(x=340,y=60)
+        # txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=250,y=60,width=80)
+
+
         
         
         # .....................Frame3.................
