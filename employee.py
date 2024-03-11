@@ -8,6 +8,21 @@ class emplyee :
         title= Label(self.root,text="Employee Payroll Mnagement System",font=("times new roman",30,"bold"),bg="#ADD8E6",fg="black").place(x=0,y=0,relwidth=1)
         
         # .....................frame1.................
+        
+        #...........variables....................
+        self.var_code= StringVar()
+        self.var_desig= StringVar()
+        self.var_dob= StringVar()
+        self.var_name= StringVar()
+        self.var_doj= StringVar()
+        self.var_exp= StringVar()
+        self.var_age= StringVar()
+        self.var_proof= StringVar()
+        self.var_gender_m= StringVar()
+        self.var_gender_f= StringVar()
+        self.var_contact= StringVar()
+        self.var_address= StringVar()
+        self.var_email= StringVar()
         Frame1 = Frame(self.root,bd=4,relief=RIDGE)
         Frame1.place(x=10,y=60,width=750,height=580)
         Frame1.config(bg="white")
@@ -16,89 +31,98 @@ class emplyee :
         
         # ................row1...........
         lbl_code = Label(Frame1,text="Employee code",font=("times new roman",18,),bg="white",fg="black").place(x=10,y=60)
-        txt_code = Entry(Frame1,font=("times new roman",18,),bg="white",fg="black").place(x=200,y=60,width=200)
+        txt_code = Entry(Frame1,font=("times new roman",18,),textvariable= self.var_code ,bg="white",fg="black").place(x=200,y=60,width=200)
         lbl_code = Button(Frame1,text="Search",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=420,y=60)
 
 
 
         # ................row2...........
         lbl_Designation = Label(Frame1,text="Designation",font=("times new roman",18,),bg="white",fg="black").place(x=10,y=120)
-        txt_Designation = Entry(Frame1,font=("times new roman",18,),bg="white",fg="black").place(x=200,y=120,width=200)
+        txt_Designation = Entry(Frame1,font=("times new roman",18,),textvariable= self.var_desig ,bg="white",fg="black").place(x=200,y=120,width=200)
         
         lbl_dob = Label(Frame1,text="D.O.B",font=("times new roman",18,),bg="white",fg="black").place(x=420,y=120)
-        txt_dob = Entry(Frame1,font=("times new roman",18,),bg="white",fg="black").place(x=510,y=120,width=200)
+        txt_dob = Entry(Frame1,font=("times new roman",18,),textvariable= self.var_dob ,bg="white",fg="black").place(x=510,y=120,width=200)
         
         # ................row3...........
         lbl_name = Label(Frame1, text="Name", font=("times new roman", 18), bg="white", fg="black").place(x=10, y=180)
-        txt_name = Entry(Frame1, font=("times new roman", 18), bg="white", fg="black").place(x=200, y=180, width=200)   
+        txt_name = Entry(Frame1, font=("times new roman", 18), textvariable= self.var_name  , bg="white", fg="black").place(x=200, y=180, width=200)   
 
         lbl_doj = Label(Frame1, text="D.O.J", font=("times new roman", 18), bg="white", fg="black").place(x=420, y=180)
-        txt_doj = Entry(Frame1, font=("times new roman", 18), bg="white", fg="black").place(x=510, y=180, width=200)
+        txt_doj = Entry(Frame1, font=("times new roman", 18),textvariable= self.var_doj , bg="white", fg="black").place(x=510, y=180, width=200)
         
         # ................row4...........
         lbl_Experience = Label(Frame1, text="Experience", font=("times new roman", 18), bg="white", fg="black").place(x=10, y=240)
-        txt_Experience = Entry(Frame1, font=("times new roman", 18), bg="white", fg="black").place(x=200, y=240, width=200)   
+        txt_Experience = Entry(Frame1, font=("times new roman", 18), bg="white",textvariable= self.var_exp , fg="black").place(x=200, y=240, width=200)   
 
         lbl_Age = Label(Frame1, text="Age", font=("times new roman", 18), bg="white", fg="black").place(x=420, y=240)
-        txt_Age = Entry(Frame1, font=("times new roman", 18), bg="white", fg="black").place(x=510, y=240, width=200)
+        txt_Age = Entry(Frame1, font=("times new roman", 18), textvariable= self.var_age ,bg="white", fg="black").place(x=510, y=240, width=200)
         
          # ................row5...........
         lbl_Proof = Label(Frame1, text="Proof  ID", font=("times new roman", 18), bg="white", fg="black").place(x=10, y=300)
-        txt_Proof = Entry(Frame1, font=("times new roman", 18), bg="white", fg="black").place(x=200, y=300, width=200)   
+        txt_Proof = Entry(Frame1, font=("times new roman", 18),textvariable= self.var_proof , bg="white", fg="black").place(x=200, y=300, width=200)   
 
         lbl_Gender = Label(Frame1, text="Gender", font=("times new roman", 18), bg="white", fg="black").place(x=420, y=300)
         radio_var = StringVar()
-        radio_button1 = Radiobutton(Frame1, text="Male", variable=radio_var, value="Male", font=("times new roman", 16), bg="white", fg="black")
+        radio_button1 = Radiobutton(Frame1, text="Male", variable=radio_var,value="male", textvariable= self.var_gender_m , font=("times new roman", 16), bg="white", fg="black")
         radio_button1.place(x=510, y=300)
 
         
-        radio_button2 = Radiobutton(Frame1, text="Female", variable=radio_var, value="Female"  ,font=("times new roman", 16), bg="white", fg="black")
+        radio_button2 = Radiobutton(Frame1, text="Female", variable=radio_var, value="Female" ,textvariable= self.var_gender_f,font=("times new roman", 16), bg="white", fg="black")
         radio_button2.place(x=590, y=300)
         
         
           # ................row6...........
         lbl_Email = Label(Frame1, text="Email", font=("times new roman", 18), bg="white", fg="black").place(x=10, y=360)
-        txt_Email = Entry(Frame1, font=("times new roman", 18), bg="white", fg="black").place(x=200, y=360, width=200)   
+        txt_Email = Entry(Frame1, font=("times new roman", 18),textvariable= self.var_email , bg="white", fg="black").place(x=200, y=360, width=200)   
 
         lbl_con = Label(Frame1, text="Contact", font=("times new roman", 18), bg="white", fg="black").place(x=420, y=360)
-        txt_con = Entry(Frame1, font=("times new roman", 18), bg="white", fg="black").place(x=510, y=360, width=200)
+        txt_con = Entry(Frame1, font=("times new roman", 18),textvariable= self.var_contact, bg="white", fg="black").place(x=510, y=360, width=200)
         # ................row7...........
-        lbl_designation2 = Label(Frame1, text="Address", font=("times new roman", 18), bg="white", fg="black").place(x=10, y=420)
-        txt_code3 = Text(Frame1, font=("times new roman", 18), bg="white", fg="black",height=4, width=42).place(x=200, y=420, )  
+        lbl_Address = Label(Frame1, text="Address", font=("times new roman", 18), bg="white", fg="black").place(x=10, y=420)
+        self.txt_Address = Text(Frame1, font=("times new roman", 18),bg="white", fg="black",height=4, width=42)
+        self.txt_Address.place(x=200, y=420 )  
 
 
         
         # .....................frame2.................
+        #......................variables
+        
+        self.var_base_pay = StringVar()
+        self.var_present = StringVar()
+        self.var_medical = StringVar()
+        self.var_conv = StringVar()
+        self.var_p_f = StringVar()
+        self.var_net_sal = StringVar()
         Frame2 = Frame(self.root,bd=4,relief=RIDGE)
         Frame2.place(x=770,y=60,width=490,height=300)
         Frame2.config(bg="white")
         title2= Label(Frame2,text="Employee Salary Details",font=("times new roman",20,),bg="lightgray",fg="black").place(x=0,y=0,relwidth=1)
         
         # .............row1...........
-        lbl_code = Label(Frame2,text="Base Pay",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=60)
-        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=120,y=60,width=90)
+        lbl_Base = Label(Frame2,text="Base Pay",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=60)
+        txt_Base = Entry(Frame2,font=("times new roman",18), textvariable=self.var_base_pay   ,bg="white",fg="black").place(x=120,y=60,width=90)
         
-        lbl_code = Label(Frame2,text="Present Days",font=("times new roman",18,),bg="white",fg="black").place(x=230,y=60)
-        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=370,y=60,width=90)
+        lbl_Present = Label(Frame2,text="Present Days",font=("times new roman",18,),bg="white",fg="black").place(x=230,y=60)
+        txt_Present = Entry(Frame2,font=("times new roman",18), textvariable=self.var_present ,bg="white",fg="black").place(x=370,y=60,width=90)
         
        # .............row2...........
-        lbl_code = Label(Frame2,text="Medical",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=120)
-        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=120,y=120,width=90)
+        lbl_Medical = Label(Frame2,text="Medical",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=120)
+        txt_Medical = Entry(Frame2,font=("times new roman",18), textvariable=self.var_medical ,bg="white",fg="black").place(x=120,y=120,width=90)
         
-        lbl_code = Label(Frame2,text="Convinence",font=("times new roman",18,),bg="white",fg="black").place(x=230,y=120)
-        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=370,y=120,width=90)
+        lbl_Convinence = Label(Frame2,text="Convinence",font=("times new roman",18,),bg="white",fg="black").place(x=230,y=120)
+        txt_Convinence = Entry(Frame2,font=("times new roman",18), textvariable=self.var_conv ,bg="white",fg="black").place(x=370,y=120,width=90)
        
         # .............row3...........
-        lbl_code = Label(Frame2,text="P.F",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=180)
-        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=120,y=180,width=90)
+        lbl_PF = Label(Frame2,text="P.F",font=("times new roman",18,),bg="white",fg="black").place(x=5,y=180)
+        txt_PF = Entry(Frame2,font=("times new roman",18), textvariable=self.var_p_f ,bg="white",fg="black").place(x=120,y=180,width=90)
 
-        lbl_code = Label(Frame2,text="Net Salary",font=("times new roman",18,),bg="white",fg="black").place(x=230,y=180)
-        txt_code = Entry(Frame2,font=("times new roman",18),bg="white",fg="black").place(x=370,y=180,width=90)
+        lbl_net = Label(Frame2,text="Net Salary",font=("times new roman",18,),bg="white",fg="black").place(x=230,y=180)
+        txt_net = Entry(Frame2,font=("times new roman",18), textvariable=self.var_net_sal,bg="white",fg="black").place(x=370,y=180,width=90)
         
         # ..............adding buttons ..............
-        lbl_code = Button(Frame2,text="Calculate",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=180,y=240)
-        lbl_code = Button(Frame2,text="Save",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID,).place(x=280,y=240)
-        lbl_code = Button(Frame2,text="Clear",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=350,y=240)
+        btn_Calculate = Button(Frame2,text="Calculate",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=180,y=240)
+        btn_Save = Button(Frame2,text="Save",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID,).place(x=280,y=240)
+        btn_clear = Button(Frame2,text="Clear",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=350,y=240)
         # lbl_code = Button(Frame2,text="Print",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=360,y=240)
 
        
@@ -130,13 +154,8 @@ class emplyee :
           
         def clr():
           self.var_operator=''
-
           self.var_txt.set(self.var_operator)
 
-          
-
-          
-          
         title4= Entry(cal_frame,text="Calculator",textvariable=self.var_txt,font=("times new roman",20,),bg="lightgray",fg="black").place(x=0,y=0,relwidth=1)
 
           
@@ -174,7 +193,9 @@ class emplyee :
         title5= Label(sal_frame,text="Salary Slip",font=("times new roman",20,),bg="lightgray",fg="black").place(x=0,y=0,relwidth=1)
  
         sal_frame2 =Frame(sal_frame,bg="white",bd=2,relief=RIDGE)
-        sal_frame2.place(x=0,y=32,relwidth=1,height=220)   
+        sal_frame2.place(x=0,y=32,relwidth=1,height=180)   
+        lbl_print = Button(sal_frame,text="Print",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID,).place(x=100,y=215,width=60,height=35)
+
         
         scroll_y= Scrollbar(sal_frame2,orient=VERTICAL)
         scroll_y.pack(fill=Y,side=RIGHT)
