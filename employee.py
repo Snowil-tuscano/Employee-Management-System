@@ -120,10 +120,11 @@ class emplyee :
         txt_net = Entry(Frame2,font=("times new roman",18), textvariable=self.var_net_sal,bg="white",fg="black").place(x=370,y=180,width=90)
         
         # ..............adding buttons ..............
-        btn_Calculate = Button(Frame2,text="Calculate",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=180,y=240)
+   
+        btn_Calculate = Button(Frame2,text="Calculate",font=("times new roman",14),command= self.calculate, bg="#f0f0f0",fg="black",relief=SOLID).place(x=180,y=240)
         btn_Save = Button(Frame2,text="Save",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID,).place(x=280,y=240)
         btn_clear = Button(Frame2,text="Clear",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=350,y=240)
-        # lbl_code = Button(Frame2,text="Print",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=360,y=240)
+         # lbl_code = Button(Frame2,text="Print",font=("times new roman",14),bg="#f0f0f0",fg="black",relief=SOLID).place(x=360,y=240)
 
        
 
@@ -199,7 +200,27 @@ class emplyee :
         
         scroll_y= Scrollbar(sal_frame2,orient=VERTICAL)
         scroll_y.pack(fill=Y,side=RIGHT)
-        
+       
+    def calculate(self):
+      print( self.var_code.get(),
+       self.var_desig.get(),
+       self.var_dob.get(),
+       self.var_name.get(),
+       self.var_doj.get(),
+       self.var_exp.get(),
+       self.var_age.get(),
+       self.var_proof.get(),
+       self.var_gender_m.get(),
+       self.var_gender_f.get(),
+        self.var_contact.get(),
+        self.var_address.get(),
+        self.var_email.get(),
+        self.var_base_pay.get(),
+        self.var_present.get(),
+        self.var_medical.get(),
+        self.var_conv.get(),
+        self.var_p_f.get(),
+        self.var_net_sal.get())    
 
         
         
