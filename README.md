@@ -1,6 +1,6 @@
 ## Employee Management System with Tkinter GUI
 
-<img width="957" alt="image" src="https://github.com/Snowil-tuscano/Employee-Management-System/assets/103951058/ea9ee515-8b7d-4ec7-a60b-201534bb90df">
+<img width="952" alt="image" src="https://github.com/Snowil-tuscano/Employee-Management-System/assets/103951058/29b26e67-bb7a-4c08-963e-5b65807d2f43">
 
 **Description:**
 This repository contains an Employee Management System built using Python's Tkinter library for creating graphical user interfaces (GUIs). The system provides a user-friendly interface for managing employee data efficiently.
