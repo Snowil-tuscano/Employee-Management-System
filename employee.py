@@ -18,8 +18,7 @@ class emplyee :
         self.var_exp= StringVar()
         self.var_age= StringVar()
         self.var_proof= StringVar()
-        self.var_gender_m= StringVar()
-        self.var_gender_f= StringVar()
+        self.var_gender = StringVar()
         self.var_contact= StringVar()
         self.var_address= StringVar()
         self.var_email= StringVar()
@@ -62,12 +61,11 @@ class emplyee :
         txt_Proof = Entry(Frame1, font=("times new roman", 18),textvariable= self.var_proof , bg="white", fg="black").place(x=200, y=300, width=200)   
 
         lbl_Gender = Label(Frame1, text="Gender", font=("times new roman", 18), bg="white", fg="black").place(x=420, y=300)
-        radio_var = StringVar()
-        radio_button1 = Radiobutton(Frame1, text="Male", variable=radio_var,value="male", textvariable= self.var_gender_m , font=("times new roman", 16), bg="white", fg="black")
+        radio_button1 = Radiobutton(Frame1, text="Male", variable=self.var_gender, value="male", font=("times new roman", 16), bg="white", fg="black")
         radio_button1.place(x=510, y=300)
 
         
-        radio_button2 = Radiobutton(Frame1, text="Female", variable=radio_var, value="Female" ,textvariable= self.var_gender_f,font=("times new roman", 16), bg="white", fg="black")
+        radio_button2 = Radiobutton(Frame1, text="Female", variable=self.var_gender, value="female", font=("times new roman", 16), bg="white", fg="black")
         radio_button2.place(x=590, y=300)
         
         
@@ -210,8 +208,7 @@ class emplyee :
        self.var_exp.get(),
        self.var_age.get(),
        self.var_proof.get(),
-       self.var_gender_m.get(),
-       self.var_gender_f.get(),
+       self.var_gender.get(),
         self.var_contact.get(),
         self.var_address.get(),
         self.var_email.get(),
