@@ -2,7 +2,7 @@ from tkinter import *
 class emplyee :
     def __init__(self,root) :
         self.root=root
-        self.root.title("Employee Payroll Mnagement System")
+        self.root.title("Employee Payroll Management System")
         self.root.geometry("1350x750")
         self.root.config(bg="white")
         title= Label(self.root,text="Employee Payroll Mnagement System",font=("times new roman",30,"bold"),bg="#ADD8E6",fg="black").place(x=0,y=0,relwidth=1)
